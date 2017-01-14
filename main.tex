@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{The Currency Problem}
+\author{Tyler Reimold }
+\date{January 2017}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem}
+Bobby has four dimes. Amy has 30 pennies. Which child has more money?
+\section{Proof}
+We know that the value of a dime is equal to ten pennies. We can then say that the value of a dime is equal to $10x$, where $x$ is equal to the number of dimes. We can model possible combinations of the dime and penny with the equation $$S=\{x, y | y,i,x \in \mathbb{N}\{\forall x\{\forall y < 10x\{\forall i =10x\{ y < i \}\}\}\}\} $$
+where $S$ is the set of possible combinations where the value of the dimes is greater than the value of the pennies, $x$ is the number of dimes, $i$ is the value of the dimes and $y$ is the number and value of the pennies. We can prove this statement is true using induction.
+\subsection{Basis Step}
+Let $x$ be equal to 1. The value of $i$ is thus 10. By definition, $y$ must then be a number less than 10. Clearly, $y < i$.
+\subsection{Induction Step}
+Assume that $x = k$. The value of $i$ is thus 10k. By definition, $y$ must then be a number less than 10k. Therefore, $y < i$
+\section{Solution}
+Let the number of Bobby's dimes in section 1 be $x$, and the value of Amy's pennies be $y$. If $x,y\in S$, then $i > y$ where $i$ is the value of Bobby's currency. Therefore, Bobby has more money if $x,y\in S$. Let $x$ be equal to 4 and $y$ be equal to 30. $i$ is thus equal to $10 * 4 = 40$. $30 < 40$, so clearly $y < i$. Therefore, Bobby has more money.
+
+\end{document}
